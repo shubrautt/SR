@@ -12,7 +12,7 @@
 }
 @media (max-width: 750px) {
     :root{
-        --main-width: 95%;
+        --main-width: 85%;
     }
 }
 body{
@@ -125,6 +125,7 @@ main{
     justify-content: center;
     align-items: center;
     height: 400px;
+    height: 70vh;
     flex-direction: column;
     position: relative;
 }
