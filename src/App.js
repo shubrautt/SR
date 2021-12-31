@@ -1,6 +1,9 @@
 import Header from './components/header';
 import Main from './components/main';
 import About from './components/about';
+import Skills from './components/skills';
+import Projects from './components/projects';
+import Footer from './components/footer';
 import './App.css';
 
 function App() {
@@ -9,6 +12,9 @@ function App() {
       <Header />
       <Main />
       <About />
+      <Skills />
+      <Projects />
+      <Footer />
     </div>
   );
 }

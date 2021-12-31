@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 :root{
     --main-width: 680px;
@@ -54,17 +55,16 @@ nav{
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
     width: 250px;
-    height: 180px;
+    padding-top: 60px;
     background: #181818;
     border-radius: 10px;
     box-shadow: inset 0 0 50px rgba(230, 230, 230, 0.041);
-    transform: translate(-50%, -300%);
+    transform: translate(-50%, -50%) scale(0);
     z-index: 1000;
     padding-bottom: 5px;
     transition: transform 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -74,13 +74,18 @@ header input:checked::before{
     display: none;
 }
 header input:checked ~ nav{
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
 }
 nav a{
-    color: rgba(255, 255, 255, 0.61);
     text-decoration: none;
     font-size: 0.8em;
     margin: 0.5em 0;
+}
+nav a .linkBtn{
+    background: none;
+    color: rgba(255, 255, 255, 0.61);
+    border: none;
+    cursor: pointer;
 }
 nav::before{
     content: '';
@@ -137,6 +142,9 @@ main p{
 main p:nth-child(3){
     font-size: 0.9em;
 }
+main h1{
+    text-align: center;
+}
 main h1 span{
     font-family: 'Dancing Script', cursive;
     font-size: 1.2em;
@@ -182,4 +190,110 @@ main h1 span{
 }
 .about p span {
     color: #ff775c;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+}
+
+/* skills */
+.skills{
+    width: var(--main-width);
+    margin: 50px auto 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.skills h2{
+    letter-spacing: 3px;
+}
+.cards{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 100px;
+    height: 120px;
+    background: rgb(37, 37, 37);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.212),
+    inset 0 0 30px rgba(255, 255, 255, 0.075);
+}
+.card p{
+    margin-top: 10px;
+    color: var(--sec-color);
+}
+.card i{
+    color: var(--sec-color);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.144);
+}
+
+/* projects */
+.projects{
+    width: var(--main-width);
+    margin: 150px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.projects .container{
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projectLink{
+    text-decoration: none;
+    margin: 10px 30px;
+}
+.projectCard{
+    width: 180px;
+    height: 200px;
+    background: rgb(24, 24, 24);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.055),
+    inset 0 0 50px rgba(255, 255, 255, 0.034);
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+.projectCard p:nth-child(2){
+    margin-top: 10px;
+}
+.projectCard p{
+    color: var(--sec-color);
+    margin: 2px;
+    text-decoration: none;
+}
+.projectCard .imgContainer{
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px;
+    overflow: hidden;
+}
+.projectCard .imgContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+/* footer */
+footer{
+    width: var(--main-width);
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    margin: 0 10px;
+    color: var(--sec-color);
+}
+footer a:hover{
+    color: white;
 }
