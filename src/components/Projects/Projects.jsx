@@ -1,6 +1,8 @@
-import ProjectCard from "./projectcard";
+import ProjectCard from "../ProjectCard/ProjectCard";
 
-function Projects() {
+import "./style.css";
+
+const Projects = () => {
   return (
     <div className="projects" id="Projects">
       <h2>Projects</h2>
@@ -20,5 +22,6 @@ function Projects() {
       </div>
     </div>
   );
-}
+};
+
 export default Projects;

@@ -1,0 +1,38 @@
+.skills {
+  width: var(--main-width);
+  margin: 50px auto 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.skills h2 {
+  letter-spacing: 3px;
+}
+.cards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 100px;
+  height: 120px;
+  background: rgb(37, 37, 37);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.212),
+    inset 0 0 30px rgba(255, 255, 255, 0.075);
+}
+.card p {
+  margin-top: 10px;
+  color: var(--sec-color);
+}
+.card i {
+  color: var(--sec-color);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.144);
+}

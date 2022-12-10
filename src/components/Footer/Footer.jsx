@@ -1,5 +1,6 @@
-function Footer() {
+import "./style.css";
 
+const Footer = () => {
   return (
     <footer id="footer">
       <a
@@ -32,6 +33,6 @@ function Footer() {
       </a>
     </footer>
   );
-}
+};
 
 export default Footer;

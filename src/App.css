@@ -1,299 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
-:root{
-    --main-width: 680px;
-    --sec-color: rgba(255, 255, 255, 0.521);
+:root {
+  --main-width: 680px;
+  --sec-color: rgba(255, 255, 255, 0.521);
 }
 @media (max-width: 750px) {
-    :root{
-        --main-width: 85%;
-    }
+  :root {
+    --main-width: 85%;
+  }
 }
-body{
-    background: #131313;
-    color: white;
+body {
+  background: #131313;
+  color: white;
 }
 
-/* Header */
-header{
-    width: var(--main-width);
-    height: 120px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-header input{
-    width: 23px;
-    height: 23px;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    position: relative;
-}
-header input::before{
-    content: '\f805';
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 700;
-    color: rgb(138, 138, 138);
-    font-size: 1.2em;
-}
-header p{
-    font-size: 1.2em;
-}
-nav{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    width: 250px;
-    padding-top: 60px;
-    background: #181818;
-    border-radius: 10px;
-    box-shadow: inset 0 0 50px rgba(230, 230, 230, 0.041);
-    transform: translate(-50%, -50%) scale(0);
-    z-index: 1000;
-    padding-bottom: 5px;
-    transition: transform 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-    border: 2px solid rgba(255, 255, 255, 0.151);
-}
-header input:checked::before{
-    display: none;
-}
-header input:checked ~ nav{
-    transform: translate(-50%, -50%) scale(1);
-}
-nav a{
-    text-decoration: none;
-    font-size: 0.8em;
-    margin: 0.5em 0;
-}
-nav a .linkBtn{
-    background: none;
-    color: rgba(255, 255, 255, 0.61);
-    border: none;
-    cursor: pointer;
-}
-nav::before{
-    content: '';
+@media (max-width: 565px) {
+  .skills {
     width: 100%;
-    height: 22%;
-    position: absolute;
-    border-radius: 10px 10px 0 0;
-    top: 0;
-    background: rgba(255, 255, 255, 0.021);
-    box-shadow: inset 0 0 50px rgba(23, 77, 255, 0.041);
-    z-index: 20;
-}
-header label{
-    position: absolute;
-    top: 10px;
-    z-index: 100;
-    cursor: pointer;
-}
-.overlay{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.301);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    transform: scale(0);
-    transition: opacity 0.4s;
-    z-index: 999;
-}
-header input:checked ~ .overlay{
-    transform: scale(1);
-    opacity: 1;
-}
-
-/* main */
-main{
-    width: var(--main-width);
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    height: 70vh;
-    flex-direction: column;
-    position: relative;
-}
-main p{
-    font-size: 0.7em;
-    margin: 10px 0;
-    color: var(--sec-color);
-}
-main p:nth-child(3){
-    font-size: 0.9em;
-}
-main h1{
-    text-align: center;
-}
-main h1 span{
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.2em;
-    color: #ff775c;
-}
-.indicator{
-    position: absolute;
-    bottom: 0;
-    width: 25px;
-    height: 40px;
-    border: 2px solid var(--sec-color);
-    border-radius: 50px;
-}
-.indicator::before{
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 4px;
-    height: 4px;
-    background: var(--sec-color);
-    border-radius: 50px;
-    animation: dotAnimation 1s infinite;
-}
-@keyframes dotAnimation {
-    0%{
-        transform: translate(-50%, 0%);
-    }
-    100%{
-        transform: translate(-50%, 300%);
-    }
-}
-/* about */
-.about{
-    width: var(--main-width);
-    height: 400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.about p span {
-    color: #ff775c;
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.4em;
-}
-
-/* skills */
-.skills{
-    width: var(--main-width);
     margin: 50px auto 100px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.skills h2{
-    letter-spacing: 3px;
-}
-.cards{
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.card{
-    width: 100px;
-    height: 120px;
-    background: rgb(37, 37, 37);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.212),
-    inset 0 0 30px rgba(255, 255, 255, 0.075);
-}
-.card p{
-    margin-top: 10px;
-    color: var(--sec-color);
-}
-.card i{
-    color: var(--sec-color);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.144);
-}
-
-/* projects */
-.projects{
-    width: var(--main-width);
-    margin: 150px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.projects .container{
-    margin-top: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.projectLink{
-    text-decoration: none;
-    margin: 10px 30px;
-}
-.projectCard{
-    width: 180px;
-    height: 200px;
-    background: rgb(24, 24, 24);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.055),
-    inset 0 0 50px rgba(255, 255, 255, 0.034);
-    border-radius: 10px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-}
-.projectCard p:nth-child(2){
-    margin-top: 10px;
-}
-.projectCard p{
-    color: var(--sec-color);
-    margin: 2px;
-    text-decoration: none;
-}
-.projectCard .imgContainer{
-    width: 100%;
-    height: 60%;
-    border-radius: 10px 10px;
-    overflow: hidden;
-}
-.projectCard .imgContainer img{
-    width: 100%;
-    height: 100%;
-}
-
-/* footer */
-footer{
-    width: var(--main-width);
-    margin: 0 auto 30px auto;
-    display: flex;
-    justify-content: center;
-}
-footer a{
-    margin: 0 10px;
-    color: var(--sec-color);
-}
-footer a:hover{
-    color: white;
+  }
+  .card {
+    width: 80px;
+    height: 100px;
+    margin: 10px 10px;
+  }
+  .fa-3x {
+    font-size: 2em;
+  }
+  .card p {
+    font-size: 12px;
+  }
 }
