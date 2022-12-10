@@ -1,0 +1,14 @@
+.about {
+  width: var(--main-width);
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.about p span {
+  color: #ff775c;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.4em;
+}

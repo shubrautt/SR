@@ -1,0 +1,13 @@
+footer {
+  width: var(--main-width);
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: center;
+}
+footer a {
+  margin: 0 10px;
+  color: var(--sec-color);
+}
+footer a:hover {
+  color: white;
+}

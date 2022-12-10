@@ -1,0 +1,47 @@
+.projects {
+  width: var(--main-width);
+  margin: 150px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.projects .container {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.projectLink {
+  text-decoration: none;
+  margin: 10px 30px;
+}
+.projectCard {
+  width: 180px;
+  height: 200px;
+  background: rgb(24, 24, 24);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.055),
+    inset 0 0 50px rgba(255, 255, 255, 0.034);
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+.projectCard p:nth-child(2) {
+  margin-top: 10px;
+}
+.projectCard p {
+  color: var(--sec-color);
+  margin: 2px;
+  text-decoration: none;
+}
+.projectCard .imgContainer {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 10px;
+  overflow: hidden;
+}
+.projectCard .imgContainer img {
+  width: 100%;
+  height: 100%;
+}

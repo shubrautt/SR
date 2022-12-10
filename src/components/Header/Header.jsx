@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-function Header() {
+import "./style.css";
+
+const Header = () => {
   let [inputCheck, setInputCheck] = useState(false);
 
   const handleClick = () => {
@@ -56,6 +58,6 @@ function Header() {
       <div className="overlay"></div>
     </header>
   );
-}
+};
 
 export default Header;
